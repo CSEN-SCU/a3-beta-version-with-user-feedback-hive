@@ -15,3 +15,5 @@ var primaryElement = document.getElementById("primary");
 
 // Append the <p> element to the "primary" element
 primaryElement.appendChild(message);
+
+// ahhhhh help -Cinthya
