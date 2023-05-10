@@ -1,3 +1,7 @@
+# Our team - Hive
+Yulin Zeng, Cynthia Jauregui, Danish Mohammed, Dundy Pasupuleti, Venkata Yalavarthi
+
+
 # chrome-extension
 
 # Disclaimer: This code is not intended to be used as is, but rather modified / referenced for your assignment.
