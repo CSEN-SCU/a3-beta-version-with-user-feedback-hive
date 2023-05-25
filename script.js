@@ -22,11 +22,6 @@ const updateView = () => {
         const taskControls = document.createElement("div");
         taskControls.setAttribute("class", "task-controls");
 
-        // const taskEdit = document.createElement("button");
-        // taskEdit.innerHTML = "Edit";
-        // taskEdit.setAttribute("id", index + "edit");
-        // taskEdit.setAttribute("class", "task-btn task-btn-edit");
-        // taskEdit.addEventListener("click", (event) => editTask(event.target.id));
 
         const taskDelete = document.createElement("button");
         taskDelete.innerHTML = "Delete";
@@ -61,19 +56,10 @@ const addTask = (isDone) => {
 
     const taskInput = document.getElementById("task-input");
     taskInput.value = "";
+
+
 }
 
-// const editTask = (id) => {
-//
-//     const taskIndex = parseInt(id[0]);
-//     const taskText = taskArr[taskIndex].task;
-//     taskArr.splice(taskIndex, 1);
-//     localStorage.setItem("savedTasks", JSON.stringify(taskArr));
-//     updateView();
-//
-//     const taskInput = document.getElementById("task-input");
-//     taskInput.value = taskText;
-// }
 
 const deleteTask = (id) => {
 
@@ -107,3 +93,41 @@ document.getElementById("task-clear-btn").addEventListener("click", () => {
     updateView();
 })
 
+$(document).ready(function() {
+    var countdownElement = $('#clock');
+    var countdownDate = new Date();
+    countdownDate.setMinutes(countdownDate.getMinutes() + 25);
+
+    var countdown;
+
+    function startCountdown() {
+        countdown = countdownElement.countdown(countdownDate, function(event) {
+            var format = '%H:%M:%S';
+            if(event.offset.totalDays > 0) {
+                format = '%-d day%!d ' + format;
+            }
+            if(event.offset.weeks > 0) {
+                format = '%-w week%!w ' + format;
+            }
+            $(this).html(event.strftime(format));
+        }).on('finish.countdown', function(event) {
+            $(this).html('This offer has expired!')
+                .parent().addClass('disabled');
+        });
+    }
+
+    function stopCountdown() {
+        if (countdown) {
+            countdownElement.countdown('stop');
+            countdownElement.html('Countdown stopped');
+        }
+    }
+
+    $('#start-btn').click(function() {
+        startCountdown();
+    });
+
+    $('#stop-btn').click(function() {
+        stopCountdown();
+    });
+});
