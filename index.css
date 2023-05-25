@@ -15,22 +15,6 @@ body{
 }
 
 
-.pet {
-    width: 100%;
-    height: 100%;
-    position: relative;
-    cursor: pointer;
-}
-
-#pet-image {
-    position: absolute;
-    top: 20%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-
-
 .heading {
     text-align: center;
     font-size: 2rem;
@@ -121,4 +105,30 @@ body{
 
 .task-btn-clear {
     border-radius: 7px;
+}
+
+#countdown {
+    text-align: center;
+    margin-top: 50px;
+}
+
+#clock {
+    font-size: 48px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+#start-btn, #stop-btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 18px;
+    margin-right: 10px;
+}
+
+#start-btn:hover, #stop-btn:hover {
+    background-color: #45a049;
 }

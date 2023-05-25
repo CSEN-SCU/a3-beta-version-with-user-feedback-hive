@@ -5,12 +5,12 @@
     "description": "A simple TODO list",
     "action": {
         "default_popup": "index.html",
-        "default_icon": "logo.png"
+        "default_icon": "img/logo.png"
     },
     "icons": {
-        "16": "logo.png",
-        "32": "logo.png",
-        "48": "logo.png",
-        "128": "logo.png"
+        "16": "img/logo.png",
+        "32": "img/logo.png",
+        "48": "img/logo.png",
+        "128": "img/logo.png"
     }
 }
