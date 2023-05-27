@@ -114,7 +114,12 @@ startButton.addEventListener('click', () => {
   if (!isRunning) {
     isRunning = true;
     chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
-      chrome.runtime.sendMessage({tabId: tabs[0].id, command: 'start'});
+      chrome.scripting.executeScript({
+        target: { tabId: tabs[0].id },
+        files: ['contentScript.js']
+      }, () => {
+        chrome.runtime.sendMessage({command: 'start'});
+      });
     });
     timer = setInterval(() => {
       timeLeft--;
@@ -130,6 +135,14 @@ stopButton.addEventListener('click', () => {
   if (isRunning) {
     isRunning = false;
     clearInterval(timer);
+    chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
+      chrome.scripting.executeScript({
+        target: { tabId: tabs[0].id },
+        files: ['contentScript.js']
+      }, () => {
+        chrome.runtime.sendMessage({command: 'stop'});
+      });
+    });
   }
 });
 
@@ -139,8 +152,14 @@ resetButton.addEventListener('click', () => {
   updateTimerDisplay();
   clearInterval(timer);
   chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
-    chrome.runtime.sendMessage({tabId: tabs[0].id, command: 'reset'});
+    chrome.scripting.executeScript({
+      target: { tabId: tabs[0].id },
+      files: ['contentScript.js']
+    }, () => {
+      chrome.runtime.sendMessage({command: 'reset'});
+    });
   });
 });
+
 
 updateTimerDisplay();
