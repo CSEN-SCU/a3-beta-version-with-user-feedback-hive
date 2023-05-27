@@ -13,9 +13,17 @@ pikachuDiv.appendChild(pikachuGif);
 document.body.appendChild(pikachuDiv);
 
 chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
+  console.log(message.command)
   if (message.command === 'start') {
+    // document.getElementById("pikachuDiv").src = chrome.runtime.getURL("pikachu-catch.gif");
+
     pikachuDiv.style.display = 'block'; // Show the gif when 'start' message is received
   } else if (message.command === 'reset') {
     pikachuDiv.style.display = 'none'; // Hide the gif when 'reset' message is received
+  }
+  else if (message.command === 'stop') {
+    console.log("Stop")
+    // document.getElementById("pikachuDiv").src = chrome.runtime.getURL("pikachu-nope.gif");
+    pikachuDiv.style.display = 'block'; // Hide the gif when 'reset' message is received 
   }
 });
