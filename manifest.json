@@ -1,16 +1,35 @@
 {
     "manifest_version": 3,
-    "name": "TODO list",
-    "version": "1.0.0",
-    "description": "A simple TODO list",
+    "name": "Sleepy Pikachu",
+    "version": "1.0",
+    "permissions": [
+      "activeTab",
+      "scripting",
+      "webRequest",
+      "<all_urls>"
+    ],
+    "host_permissions": [
+      "<all_urls>"
+    ],
     "action": {
-        "default_popup": "index.html",
-        "default_icon": "img/logo.png"
+      "default_popup": "popup.html"
     },
-    "icons": {
-        "16": "img/logo.png",
-        "32": "img/logo.png",
-        "48": "img/logo.png",
-        "128": "img/logo.png"
-    }
-}
+    "background": {
+      "service_worker": "background.js"
+    },
+    "web_accessible_resources": [
+      {
+        "resources": ["pikachu-catch.gif"],
+        "matches": ["<all_urls>"],
+        "extension_ids": ["*"]
+      }
+    ],
+    "content_scripts": [
+      {
+        "matches": ["http://*/*", "https://*/*"],
+        "js": ["contentScript.js"]
+      }
+    ]
+  }
+
+  
