@@ -1,6 +1,6 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-  <head>
+<head>
     <title>Hive</title>
     <link rel="stylesheet" href="index.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -9,30 +9,30 @@
     <script type="text/javascript" src="lib/jquery.min.js"></script>
     <script src="lib/jquery.countdown.js"></script>
     <link rel="stylesheet" type="text/css" href="popup.css">
-  </head>
-  <body>
+</head>
+<body>
     <div id="container" >
-      <div class="heading">Hive</div>
-      <div id="countdown">
-        <div id="clock">
-          25:00
+        <div class="heading">Hive</div>
+        <div id="countdown">
+            <div id="clock">
+                00:00
+            </div>
+            <button id="start-btn">Start</button>
+            <button id="stop-btn">Stop</button>
+            <button id="reset">Reset</button>
         </div>
-        <button id="start-btn">Start</button>
-        <button id="stop-btn">Stop</button>
-        <button id="reset">Reset</button>
-      </div>
-      <div id="todo" class="todo-block">
-        <div class="heading2">Tasks ToDo</div>
-        <div class="input-div">
-            <input type="text" id="task-input" class="task-input" placeholder="Enter a task to fulfill"/>
-            <button id="task-submit-btn" class="task-btn task-btn-submit">Add</button>
-        </div>
-        <div class="tasks-list-div" id="tasksList"></div>
-        <div class="task-clear-div">
-            <button id="task-clear-btn" class="task-btn task-btn-clear">Clear All</button>
+        <div id="todo" class="todo-block">
+            <div class="heading2">Tasks ToDo</div>
+            <div class="input-div">
+                <input type="text" id="task-input" class="task-input" placeholder="Enter a task to fulfill"/>
+                <button id="task-submit-btn" class="task-btn task-btn-submit">Add</button>
+            </div>
+            <div class="tasks-list-div" id="tasksList"></div>
+            <div class="task-clear-div">
+                <button id="task-clear-btn" class="task-btn task-btn-clear">Clear All</button>
+            </div>
         </div>
     </div>
-  </div>
     <script src="popup.js"></script>
-  </body>
+</body>
 </html>

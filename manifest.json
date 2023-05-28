@@ -1,42 +1,39 @@
 {
-    "manifest_version": 3,
-    "name": "Sleepy Pikachu",
-    "version": "1.0",
-    "permissions": [
-      "activeTab",
-      "scripting",
-      "webRequest",
-      "<all_urls>"
-    ],
-    "host_permissions": [
-      "<all_urls>"
-    ],
-    "action": {
-      "default_popup": "popup.html",
-      "default_icon": "logo.png"
-    },
-    "background": {
-      "service_worker": "background.js"
-    },
-    "web_accessible_resources": [
-      {
-        "resources": ["pikachu-catch.gif","pikachu-nope.gif"],
-        "matches": ["<all_urls>"],
-        "extension_ids": ["*"]
-      }
-    ],
-    "content_scripts": [
-      {
-        "matches": ["http://*/*", "https://*/*"],
-        "js": ["contentScript.js"]
-      }
-    ],
-    "icons": {
-        "16": "logo.png",
-        "32": "logo.png",
-        "48": "logo.png",
-        "128": "logo.png"
+  "manifest_version": 3,
+  "name": "Sleepy Pikachu",
+  "version": "1.0",
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "declarativeNetRequest",
+    "declarativeNetRequestFeedback",
+    "<all_urls>",
+    "tabs"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": "logo.png"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": ["pikachu-catch.gif","pikachu-nope.gif"],
+      "matches": ["<all_urls>"],
+      "extension_ids": ["*"]
     }
+  ],
+  "content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*"],
+      "js": ["contentScript.js"]
+    }
+  ],
+  "icons": {
+    "16": "logo.png",
+    "32": "logo.png",
+    "48": "logo.png",
+    "128": "logo.png"
   }
-
-  
+}
