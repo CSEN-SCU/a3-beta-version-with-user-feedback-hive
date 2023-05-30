@@ -111,6 +111,7 @@ const addsite = (isDone) => {
     const site = document.getElementById("site-input").value;
     if (site === null || site.trim() === "") return;
     siteArr.push({ site, isDone });
+    //()
     localStorage.setItem("savedsites", JSON.stringify(siteArr));
     updateView();
 
