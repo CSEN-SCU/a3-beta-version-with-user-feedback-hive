@@ -2,17 +2,31 @@
 <html>
 <head>
     <title>Hive</title>
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="lib/bootstrap.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap" rel="stylesheet">
     <script type="text/javascript" src="lib/jquery.min.js"></script>
     <script src="lib/jquery.countdown.js"></script>
+    <script src="lib/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="lib/angular-csp.css">
     <link rel="stylesheet" type="text/css" href="popup.css">
+    <script src="block.js"></script>
 </head>
 <body>
     <div id="container" >
         <div class="heading">Hive</div>
+        <div class="row">
+            <div class="col-6" id="num-tabs">
+                Curr Open Tabs
+            </div>
+            <div class="col-6 progress" id="healthbar">
+                <div class="progress-bar progress-bar-info" id="health" role="progressbar" aria-valuenow="100"
+                aria-valuemin="0" aria-valuemax="100" style="width:100%">
+                100
+                </div>
+            </div>
+        </div>
         <div id="countdown">
             <div id="clock">
                 00:00
@@ -30,6 +44,24 @@
             <div class="tasks-list-div" id="tasksList"></div>
             <div class="task-clear-div">
                 <button id="task-clear-btn" class="task-btn task-btn-clear">Clear All</button>
+            </div>
+        </div>
+        <div id="block-sites">
+            <nav class="navbar">
+                <div class="container-fluid">
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                </div>
+            </nav>
+            <div class="collapse" id="navbarToggleExternalContent">
+                <div class="input-div">
+                    <input type="text" id="site-input" class="site-input" placeholder="Enter a site to block"/>
+                    <button id="site-submit-btn" class="site-btn site-btn-submit">Add</button>
+                </div>
+                <div class="sites-list-div" id="sitesList"></div>
+                
+
             </div>
         </div>
     </div>

@@ -67,6 +67,11 @@ body{
     flex-direction: column;
 }
 
+.sites-list-div {
+    display: flex;
+    flex-direction: column;
+}
+
 .task-div {
     display: flex;
     justify-content: space-between;
@@ -79,6 +84,22 @@ body{
 }
 
 .task-text {
+    justify-self: center;
+    max-width: 20rem;
+    word-wrap: break-word;
+    font-size: 1.3rem;
+    vertical-align: middle;
+    line-height: 1.5;
+}
+
+.site-div {
+    display: flex;
+    justify-content: space-between;
+    margin: .1rem 0rem;
+}
+
+
+.site-text {
     justify-self: center;
     max-width: 20rem;
     word-wrap: break-word;
@@ -101,7 +122,7 @@ body{
 .task-clear-div {
     display: flex;
     justify-content: center;
-    margin: 2.5rem 0 1.5rem 0;
+    margin: 2.5rem 0 -3.5rem 0;
 }
 
 .task-btn {
@@ -121,11 +142,35 @@ body{
     background-color: #FF165D;
 }
 
+.site-btn {
+    /* min-width: 4rem; */
+    border: none;
+    outline: none;
+    margin: initial;
+    /* padding: .4rem .6rem; */
+    background-color: #FF9A00;
+}
+
+.site-btn:not(:last-child) {
+    border-right : solid 1px black;
+}
+
+.site-btn:hover, .site-btn:focus {
+    background-color: #FF165D;
+}
+
 .task-input, .task-btn-edit {
     border-radius: 7px 0 0 7px;
 }
 
 .task-btn-submit, .task-btn-do {
+    border-radius: 0 7px 7px 0;
+}
+.site-input, .site-btn-edit {
+    border-radius: 7px 0 0 7px;
+}
+
+.site-btn-submit, .site-btn-do {
     border-radius: 0 7px 7px 0;
 }
 
@@ -162,3 +207,12 @@ body{
     display: none;
   }
   
+#healthbar{
+    padding: 0px;
+}
+.row{
+    align-items: center;
+}
+.navbar{
+    width:25%;
+}

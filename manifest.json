@@ -1,6 +1,6 @@
 {
   "manifest_version": 3,
-  "name": "Sleepy Pikachu",
+  "name": "Hive Extension",
   "version": "1.0",
   "permissions": [
     "activeTab",
@@ -8,7 +8,10 @@
     "declarativeNetRequest",
     "declarativeNetRequestFeedback",
     "<all_urls>",
-    "tabs"
+    "tabs",
+    "https://ajax.googleapis.com/",
+    "storage",
+    "alarms"
   ],
   "action": {
     "default_popup": "popup.html",
@@ -19,7 +22,7 @@
   },
   "web_accessible_resources": [
     {
-      "resources": ["pikachu-catch.gif","pikachu-nope.gif"],
+      "resources": ["pikachu-catch.gif","pikachu-nope.gif", "Focus.gif"],
       "matches": ["<all_urls>"],
       "extension_ids": ["*"]
     }

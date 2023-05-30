@@ -8,6 +8,8 @@ chrome.runtime.onInstalled.addListener(() => {
 });
 
 chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
+    console.log('message')
+    console.log(message.command)
     if (message.command === 'start') {
         if (!isRunning) {
             isRunning = true;
@@ -36,8 +38,12 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
 });
 
 chrome.tabs.onActivated.addListener(activeInfo => {
+    console.log('tab Activated')
     resetTimer();
     sendMessageToContentScript({ command: 'reset' });
+    console.log('tab updated')
+    
+   
 });
 
 function resetTimer() {
@@ -56,8 +62,12 @@ function startTimer() {
     }, 1000);
 }
 
+
+
 function sendMessageToContentScript(message) {
+    console.log(message)
     chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
+        
         chrome.tabs.sendMessage(tabs[0].id, message);
     });
 }
@@ -65,4 +75,5 @@ function sendMessageToContentScript(message) {
 function sendMessageToPopup(message) {
     chrome.runtime.sendMessage(message);
 }
+
 
