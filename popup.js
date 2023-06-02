@@ -262,4 +262,3 @@ chrome.tabs.onUpdated.addListener(function(tabId, changedInfo, tab) {
     }
     updateView();
   });
-

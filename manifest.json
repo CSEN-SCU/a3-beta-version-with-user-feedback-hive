@@ -22,7 +22,7 @@
   },
   "web_accessible_resources": [
     {
-      "resources": ["pikachu-catch.gif","pikachu-nope.gif", "Focus.gif"],
+      "resources": ["pikachu-catch.gif","pikachu-nope.gif", "Focus.gif","pikachu_wow.gif"],
       "matches": ["<all_urls>"],
       "extension_ids": ["*"]
     }
