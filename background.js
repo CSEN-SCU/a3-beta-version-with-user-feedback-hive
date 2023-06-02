@@ -37,7 +37,7 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
         sendResponse({ gif: currentGif });
         return;
     }
-
+// i
     // sending message to all tabs with the currentGif
     chrome.tabs.query({}, function(tabs) {
         for (let i = 0; i < tabs.length; i++) {

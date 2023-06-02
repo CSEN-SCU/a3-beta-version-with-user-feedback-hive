@@ -1,0 +1,34 @@
+<!doctype html>
+<html data-ng-app="app" data-ng-csp="">
+<head>
+<style>
+  body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+  }
+
+  .container {
+    position: relative;
+    text-align: center;
+  }
+
+  .focus-image {
+    margin-bottom: 20px; 
+  }
+</style>
+</head>
+<body data-ng-controller="BlockerController">
+  <div class="container">
+    <img src="Focus.gif" class="focus-image">
+  </div>
+  <h1>Not allowed!</h1>
+  <h2>Focus On Work</h2>
+  <script src="app.js"></script>
+  <div data-ng-controller="StatsController">
+  </div>
+</body>
+</html>

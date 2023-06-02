@@ -27,7 +27,7 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
         pikachuDiv.style.display = 'none';
     }
 });
-
+//  t
 chrome.runtime.sendMessage({ command: 'getGifStatus' }, (response) => {
     if (response.gif !== "") {
         pikachuGif.src = chrome.runtime.getURL(response.gif);
