@@ -19,25 +19,35 @@ website: https://tenor.com/search/pikachu-pok%C3%A9mon-sticker-gifs
 
 Resources list: 
 https://tenor.com/view/pokemon-pikachu-gif-20793090
+
 https://tenor.com/view/pikachu-gif-19926609
+
 https://tenor.com/view/pikachu-nope-gif-19499176
+
 
 ## Timer
 Name: Jquery.countdown; 
+
 Link: https://hilios.github.io/jQuery.countdown/
 
 ## Todo List
 Name: TO-DO-LIST
+
 Link: https://github.com/hellodhavalvisariya/TO-DO-LIST-CHROME-EXTENSION-
 
 ## Tab management
 Name: Tabagotchi 
+
 Description: Tabagotchi by Breather; A chrome extension that helps you be more productive. Fewer tabs = happy Tabagotchi. More tabs = angry 
+
 Link: https://chrome-stats.com/d/ojahbhfflnbaiddhnkgeccgopmedjjen/download-thank?type=ZIP&version=1.1
 
 ## Pet
 Name: Browser extension Virtual pet 
+
 Link: https://github.com/husnuljahneer/pawbuddy-browser
 
+
 Name: Browser extension pet 
+
 Link: https://github.com/tanhauhau/browser-pet
